@@ -2,7 +2,18 @@ from flask import Flask, jsonify, render_template
 import csv
 
 app = Flask(__name__)
+def analyze_vehicle(vehicle):
+    temperature = float(vehicle["temperature"])
+    fuel = float(vehicle["fuel_consumption"])
 
+    if temperature > 100 or fuel > 15:
+        status = "Critical"
+    elif temperature >= 80 or fuel >= 10:
+        status = "Warning"
+    else:
+        status = "Normal"
+
+    return status
 
 def load_vehicles():
     vehicles = []
@@ -24,6 +35,9 @@ def home():
 @app.route("/api/vehicles")
 def get_vehicles():
     vehicles = load_vehicles()
+    
+    for vehicle in vehicles:
+        vehicle["Smart Status"] = analyze_vehicle(vehicle)
     return jsonify(vehicles)
 
 
