@@ -6,6 +6,7 @@ fetch("/api/vehicles")
             vehicles.length;
 
         const table = document.getElementById("vehicleTable");
+        table.innerHTML = "";
 
         vehicles.forEach(vehicle => {
 
@@ -18,8 +19,12 @@ fetch("/api/vehicles")
                 <td>${vehicle.temperature} °C</td>
                 <td>${vehicle.fuel_consumption}</td>
                 <td>${vehicle.status}</td>
+                <td>${vehicle["Smart Status"]}</td>
             `;
 
             table.appendChild(row);
         });
+    });
+    .catch(error => {
+        console.error("Error fetching vehicle data:", error);
     });
