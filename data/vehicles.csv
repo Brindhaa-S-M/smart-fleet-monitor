@@ -1,0 +1,6 @@
+vehicle_id,model,mileage,temperature,fuel_consumption,status
+TRUCK001,Fuso Canter,25000,78,8.5,Healthy
+TRUCK002,Fuso Fighter,42000,95,10.2,Service Required
+TRUCK003,Fuso Canter,60000,108,12.5,Critical
+TRUCK004,Fuso Super Great,18000,75,7.8,Healthy
+TRUCK005,Fuso Fighter,35000,90,9.8,Service Required
