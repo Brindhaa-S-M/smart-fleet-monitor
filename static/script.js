@@ -22,7 +22,7 @@ fetch("/api/vehicles")
 
             table.appendChild(row);
         });
-    });
+    })
     .catch(error => {
         console.error("Error loading vehicles:", error);
     };
