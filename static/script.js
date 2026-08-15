@@ -10,7 +10,7 @@ fetch("/api/vehicles")
 
             const row = document.createElement("tr");
 
-            row.innerHTML = `
+            row.innerHTML = "
                 <td>${vehicle.vehicle_id}</td>
                 <td>${vehicle.model}</td>
                 <td>${vehicle.mileage} km</td>
@@ -18,7 +18,7 @@ fetch("/api/vehicles")
                 <td>${vehicle.fuel_consumption}</td>
                 <td>${vehicle.status}</td>
                 <td>${vehicle["Smart Status"]}</td>
-            `;
+            ";
 
             table.appendChild(row);
         });
