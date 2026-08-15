@@ -17,7 +17,7 @@ fetch("/api/vehicles")
                 <td>${vehicle.temperature} °C</td>
                 <td>${vehicle.fuel_consumption}</td>
                 <td>${vehicle.status}</td>
-                <td>${vehicle["Smart Status"]}</td>
+                <td>${vehicle.["Smart Status"]}</td>
             `;
 
             table.appendChild(row);
