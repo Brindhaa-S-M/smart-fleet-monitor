@@ -32,11 +32,36 @@
 
         <tbody id="vehicleTable">
         </tbody>
+        <script>
+fetch("/api/vehicles")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(vehicles) {
 
-    </table>
+        document.getElementById("total").textContent = vehicles.length;
 
-    <script src="/static/script.js"></script>
+        const table = document.getElementById("vehicleTable");
 
+        vehicles.forEach(function(vehicle) {
+
+            const row = document.createElement("tr");
+
+            row.innerHTML =
+                "<td>" + vehicle.vehicle_id + "</td>" +
+                "<td>" + vehicle.model + "</td>" +
+                "<td>" + vehicle.mileage + " km</td>" +
+                "<td>" + vehicle.temperature + " °C</td>" +
+                "<td>" + vehicle.fuel_consumption + "</td>" +
+                "<td>" + vehicle.status + "</td>" +
+                "<td>" + vehicle["Smart Status"] + "</td>";
+
+            table.appendChild(row);
+        });
+    })
+    .catch(function(error) {
+        console.error("Error loading vehicles:", error);
+    });
+  </script>
 </body>
-
-</html>
+</html>    
