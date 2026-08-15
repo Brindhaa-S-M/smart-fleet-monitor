@@ -25,4 +25,4 @@ fetch("/api/vehicles")
     });
     .catch(error => {
         console.error("Error loading vehicles:", error);
-    });
+    };
