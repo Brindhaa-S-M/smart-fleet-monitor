@@ -2,11 +2,9 @@ fetch("/api/vehicles")
     .then(response => response.json())
     .then(vehicles => {
 
-        document.getElementById("total").textContent =
-            vehicles.length;
+        document.getElementById("total").textContent = vehicles.length;
 
         const table = document.getElementById("vehicleTable");
-        table.innerHTML = "";
 
         vehicles.forEach(vehicle => {
 
@@ -24,7 +22,7 @@ fetch("/api/vehicles")
 
             table.appendChild(row);
         });
-    });
+    })
     .catch(error => {
-        console.error("Error fetching vehicle data:", error);
+        console.error("Error loading vehicles:", error);
     });
