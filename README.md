@@ -35,6 +35,8 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
 
 ## 🖥️ Project Preview
 ![Smart Fleet Monitor Dashboard](screenshots/dashboard.png)                   
+
+## Architecture
                     Vehicle Dataset
                     vehicles.csv
                          │
