@@ -57,8 +57,8 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
                    index.html
                          │
                          ▼
-                     CSS
-                  style.css
+                        CSS
+                     style.css
 
 ## 📂 Project Structure
 smart-fleet-monitor/
