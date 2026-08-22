@@ -61,6 +61,8 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
                      style.css
 
 ## 📂 Project Structure
+
+```text
 smart-fleet-monitor/
 │
 ├── data/
@@ -73,9 +75,15 @@ smart-fleet-monitor/
 ├── templates/
 │   └── index.html
 │
+├── screenshots/
+│   └── dashboard.png
+│
 ├── app.py
 ├── requirements.txt
-└── README.md
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
 ## ⚙️ How It Works
 1. Vehicle information is stored in `vehicles.csv`.
