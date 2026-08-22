@@ -93,7 +93,7 @@ smart-fleet-monitor/
 5. The API returns the vehicle data in JSON format.
 6. JavaScript dynamically displays the information on the dashboard.
 
-## 🚀 Installation
+
 ## 🚀 Installation
 
 ### 1. Clone the repository
