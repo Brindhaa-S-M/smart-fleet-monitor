@@ -34,7 +34,7 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
 - Visual Studio Code
 
 ## 🖥️ Project Preview
-![Smart Fleet Monitor Dashboard](screenshots/dashboard.png)                   
+![Smart Fleet Monitor Dashboard](screenshots/dashboard.png.jpeg)                   
 
 ## Architecture
                     Vehicle Dataset
