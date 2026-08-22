@@ -94,23 +94,46 @@ smart-fleet-monitor/
 6. JavaScript dynamically displays the information on the dashboard.
 
 ## 🚀 Installation
+## 🚀 Installation
+
 ### 1. Clone the repository
+
+```bash
 git clone https://github.com/Brindhaa-S-M/smart-fleet-monitor.git
-### 2. Navigate to the project
 cd smart-fleet-monitor
-### 3. Create a virtual environment
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv venv
-### 4. Activate the virtual environment
-Windows:
+```
+
+### 3. Activate the virtual environment
+
+**Windows:**
+
+```bash
 venv\Scripts\activate
-### 5. Install dependencies
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 ## ▶️ Run the Application
-- python app.py
-- Open your browser and go to:
-http://127.0.0.1:5000
 
+```bash
+python app.py
+```
+
+Then open your browser and go to:
+
+```text
+http://127.0.0.1:5000
+```
 ## 👥 Team & Contributions
 ### My Contribution
 - Developed and integrated the Flask backend.
