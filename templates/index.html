@@ -3,7 +3,6 @@
 
 <head>
     <title>Smart Fleet Monitor</title>
-
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -32,36 +31,55 @@
 
         <tbody id="vehicleTable">
         </tbody>
-        <script>
-fetch("/api/vehicles")
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(vehicles) {
 
-        document.getElementById("total").textContent = vehicles.length;
+    </table>
 
-        const table = document.getElementById("vehicleTable");
+    <script>
+        fetch("/api/vehicles")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(vehicles) {
 
-        vehicles.forEach(function(vehicle) {
+                document.getElementById("total").textContent = vehicles.length;
 
-            const row = document.createElement("tr");
+                const table = document.getElementById("vehicleTable");
 
-            row.innerHTML =
-                "<td>" + vehicle.vehicle_id + "</td>" +
-                "<td>" + vehicle.model + "</td>" +
-                "<td>" + vehicle.mileage + " km</td>" +
-                "<td>" + vehicle.temperature + " °C</td>" +
-                "<td>" + vehicle.fuel_consumption + "</td>" +
-                "<td>" + vehicle.status + "</td>" +
-                "<td>" + vehicle["Smart Status"] + "</td>";
+                vehicles.forEach(function(vehicle) {
 
-            table.appendChild(row);
-        });
-    })
-    .catch(function(error) {
-        console.error("Error loading vehicles:", error);
-    });
-  </script>
+                    const row = document.createElement("tr");
+
+                    let smartStatus;
+
+                    if (vehicle.status === "Healthy") {
+                        smartStatus = "Normal";
+                    }
+                    else if (vehicle.status === "Service Required") {
+                        smartStatus = "Maintenance Soon";
+                    }
+                    else if (vehicle.status === "Critical") {
+                        smartStatus = "Immediate Maintenance";
+                    }
+                    else {
+                        smartStatus = "Unknown";
+                    }
+
+                    row.innerHTML =
+                        "<td>" + vehicle.vehicle_id + "</td>" +
+                        "<td>" + vehicle.model + "</td>" +
+                        "<td>" + vehicle.mileage + " km</td>" +
+                        "<td>" + vehicle.temperature + " °C</td>" +
+                        "<td>" + vehicle.fuel_consumption + "</td>" +
+                        "<td>" + vehicle.status + "</td>" +
+                        "<td>" + smartStatus + "</td>";
+
+                    table.appendChild(row);
+                });
+            })
+            .catch(function(error) {
+                console.error("Error loading vehicles:", error);
+            });
+    </script>
+
 </body>
-</html>    
+</html>
