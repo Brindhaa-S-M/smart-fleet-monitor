@@ -40,7 +40,8 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
 ![Smart Fleet Monitor Dashboard](screenshots/dashboard.png)    
 
 ## 🎥 Demo Video
-[Watch the Smart Fleet Monitor Demo](demo/smart-fleet-demo.mp4)
+[![Smart Fleet Monitor Demo](screenshots/dashboard.png)](https://youtu.be/3s9AqQlPPYI)
+▶️ **Click the image above to watch the complete Smart Fleet Monitor demonstration.**
 
 ## Architecture
                     Vehicle Dataset
