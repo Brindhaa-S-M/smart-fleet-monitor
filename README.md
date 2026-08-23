@@ -18,6 +18,9 @@ Smart Fleet Monitor provides a centralized web dashboard for viewing and monitor
 - ⚡ Dynamic data loading using JavaScript
 - 🤝 GitHub-based collaborative development
 
+## Architecture
+![Smart Fleet Monitor Architecture](screenshots/architecture.png)
+
 ## 🛠️ Tech Stack
 ### Frontend
 - HTML
